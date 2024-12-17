@@ -1,0 +1,40 @@
+import aspectRatio from '@tailwindcss/aspect-ratio';
+import typography from '@tailwindcss/typography';
+import type { Config } from 'tailwindcss';
+import animate from 'tailwindcss-animate';
+import colors from 'tailwindcss/colors';
+import defaultTheme from 'tailwindcss/defaultTheme';
+
+export default {
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './layouts/**/*.{js,ts,jsx,tsx}',
+    './config/**/*.{js,ts}',
+  ],
+  theme: {
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      white: colors.white,
+      black: colors.black,
+      blue: colors.blue,
+      red: colors.red,
+      violet: colors.violet,
+      green: colors.green,
+      yellow: colors.yellow,
+      gray: colors.stone,
+    },
+    fontFamily: {
+      sans: ['var(--font-sans)', ...defaultTheme.fontFamily.sans],
+    },
+    extend: {
+      colors: {
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
+      },
+    },
+  },
+  plugins: [aspectRatio, typography, animate],
+} satisfies Config;
