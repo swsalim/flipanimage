@@ -1,5 +1,6 @@
 import { FlipHorizontal2, ImageDownIcon, ImageUpIcon } from 'lucide-react';
 
+import ImageFlipDemo from '@/components/image-flip-demo';
 import { ImageKit } from '@/components/image-kit';
 
 const steps = [
@@ -51,7 +52,7 @@ export default function Steps() {
           </div>
         </div>
         <div className="flex items-start justify-end lg:order-first">
-          <ImageKit src="demo-steps.png" width={800} height={800} alt="demo image" />
+          <ImageFlipDemo />
         </div>
       </div>
     </>
