@@ -79,26 +79,15 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//queue.simpleanalyticscdn.com" />
         <link rel="dns-prefetch" href="//scripts.simpleanalyticscdn.com" />
         <link rel="dns-prefetch" href="//ik.imagekit.io" />
-        <LogoJsonLd
-          logo={absoluteUrl('/icons/logo.png')}
-          url={absoluteUrl('/')}
-        />
+        <LogoJsonLd logo={absoluteUrl('/icons/logo.png')} url={absoluteUrl()} />
       </head>
       <body
-        className={cn(
-          'flex min-h-screen flex-col font-sans antialiased',
-          plusJakartaSans.variable
-        )}
-        suppressHydrationWarning
-      >
+        className={cn('flex min-h-screen flex-col font-sans antialiased', plusJakartaSans.variable)}
+        suppressHydrationWarning>
         <Navbar />
         <main className="flex grow flex-col justify-center">{children}</main>
         <Footer />
-        <script
-          async
-          defer
-          src="https://scripts.simpleanalyticscdn.com/latest.js"
-        ></script>
+        <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
         {/* <script async src="https://scripts.simpleanalyticscdn.com/auto-events.js"></script> */}
         <noscript>
           <Image

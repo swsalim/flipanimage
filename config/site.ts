@@ -6,7 +6,7 @@ export const siteConfig: SiteConfig = {
   title: 'Flip your images online for free',
   description: 'Flip an image horizontally or vertically for free',
   siteName: 'Flip Image',
-  url: new URL(absoluteUrl('/')),
+  url: new URL(absoluteUrl()),
   openGraph: {
     image: '/images/og-default.png',
     imageAlt: 'Banner for flipanimage.xyz',
