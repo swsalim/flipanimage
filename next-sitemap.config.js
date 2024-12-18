@@ -9,8 +9,15 @@ const NEXT_SSG_FILES = [
 
 const exclude = ['/dashboard*', '/404', '/api*', '/login', '/server-sitemap.xml'];
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'
+    ? `https://${process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}`
+    : process.env.NEXT_PUBLIC_VERCEL_ENV === 'preview'
+      ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
+      : `${process.env.NEXT_PUBLIC_BASE_URL}`;
+
 const config = {
-  siteUrl: 'https://pfpresizer.com',
+  siteUrl,
   generateRobotsTxt: true, // (optional)
   generateIndexSitemap: true,
   sitemapSize: 7000,
