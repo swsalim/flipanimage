@@ -6,7 +6,7 @@ export default function LogoJsonLd({ url, logo }: { url: string; logo: string })
       {{
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        name: 'PFP Resizer',
+        name: 'Flip Image',
         logo: logo,
         url: url,
       }}

@@ -35,10 +35,10 @@ export default function ArticleJsonLd({
         ],
         publisher: {
           '@type': 'Organization',
-          name: 'Water a Day',
+          name: 'Flip Image',
           logo: {
             '@type': 'ImageObject',
-            url: absoluteUrl('/images/logo.png'),
+            url: absoluteUrl('/icons/logo.png'),
           },
         },
       }}
