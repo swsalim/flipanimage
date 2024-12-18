@@ -1,7 +1,5 @@
 import type { NextConfig } from 'next';
 
-import { socialMediaPlatforms } from './config/platforms';
-
 const nextConfig: NextConfig = {
   images: {
     dangerouslyAllowSVG: true,
@@ -20,11 +18,6 @@ const nextConfig: NextConfig = {
         destination: '/legal/terms-and-conditions',
         permanent: true,
       },
-      ...socialMediaPlatforms.map((platform) => ({
-        source: `/${platform.name}`,
-        destination: `/${platform.slug}`,
-        permanent: false,
-      })),
     ];
   },
 };
