@@ -13,7 +13,7 @@ import { Wrapper } from '@/components/wrapper';
 const config = {
   title: 'Terms and Conditions',
   description:
-    'PFPResizer operated by Yuurrific. Yuurrific offers PFPResizer and related services to you, a user, under the condition that you accept all of our set terms, including these Terms of Service and all related policies.',
+    'Flip Image operated by Yuurrific. Yuurrific offers Flip Image and related services to you, a user, under the condition that you accept all of our set terms, including these Terms of Service and all related policies.',
   url: '/legal/terms-and-conditions',
 };
 
@@ -66,34 +66,36 @@ export default function Page() {
           <Prose>
             <h1>Terms of Service</h1>
             <p>
-              Welcome to PFPresizer.com! These Terms of Service govern your use of our website and
+              Welcome to flipanimage.xyz! These Terms of Service govern your use of our website and
               services. By accessing or using our site, you agree to comply with these terms.
             </p>
             <h2>Acceptance of Terms</h2>
             <p>
-              By accessing or using PFPresizer.com, you agree to these Terms of Service and any
+              By accessing or using flipanimage.xyz, you agree to these Terms of Service and any
               additional terms and conditions that may apply to specific sections of the site or to
               products and services offered through the site.
             </p>
             <h2>Use of Cookies</h2>
             <p>
-              PFPresizer.com uses cookies to enhance your browsing experience and provide
+              flipanimage.xyz uses cookies to enhance your browsing experience and provide
               personalized content. By using our site, you consent to the use of cookies in
               accordance with our{' '}
-              <Link href="/legal/privacy-policy" className="text-violet-600 hover:text-violet-800">
+              <Link
+                href="/legal/privacy-policy"
+                className="text-violet-600 hover:text-violet-600 dark:text-violet-400 dark:hover:text-violet-500">
                 Privacy Policy
               </Link>
               .
             </p>
             <h2>Intellectual Property</h2>
             <p>
-              All content on PFPresizer.com, including text, graphics, logos, images, audio clips,
-              digital downloads, and software, is the property of PFPresizer.com or its content
+              All content on flipanimage.xyz, including text, graphics, logos, images, audio clips,
+              digital downloads, and software, is the property of flipanimage.xyz or its content
               suppliers and is protected by international copyright laws.
             </p>
             <h2>Limitation of Liability</h2>
             <p>
-              PFPresizer.com and its affiliates shall not be liable for any indirect, incidental,
+              flipanimage.xyz and its affiliates shall not be liable for any indirect, incidental,
               special, consequential, or punitive damages, or any loss of profits or revenues,
               whether incurred directly or indirectly, or any loss of data, use, goodwill, or other
               intangible losses resulting from (i) your access to or use of or inability to access
@@ -104,13 +106,8 @@ export default function Page() {
             <p>
               We reserve the right to update or modify these Terms of Service at any time without
               prior notice. Any changes will be effective immediately upon posting to this page.
-              Your continued use of PFPresizer.com after any such changes constitutes your
+              Your continued use of flipanimage.xyz after any such changes constitutes your
               acceptance of the new Terms of Service.
-            </p>
-            <h2>Governing Law</h2>
-            <p>
-              These Terms of Service shall be governed by and construed in accordance with the laws
-              of [Your Jurisdiction], without regard to its conflict of law provisions.
             </p>
           </Prose>
         </Container>

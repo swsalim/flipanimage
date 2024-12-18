@@ -14,7 +14,7 @@ interface ImageKitProps extends ImageProps {
 export function ImageKit({
   src = 'default-image.jpg',
   alt = 'Default image',
-  directory = 'pfpresizer',
+  directory = 'flipanimage',
   width = 400,
   height = 400,
   ...props

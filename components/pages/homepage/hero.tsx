@@ -5,8 +5,7 @@ export default function Hero() {
     <div className="relative isolate px-6 pt-14 lg:px-8">
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-      >
+        className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
         <div
           style={{
             clipPath:
@@ -17,12 +16,12 @@ export default function Hero() {
       </div>
       <div className="lg mx-auto max-w-4xl py-24 sm:py-32 lg:py-40">
         <div className="text-center">
-          <h1 className="text-balance text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl sm:leading-tight">
+          <h1 className="text-balance text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl sm:leading-tight dark:text-gray-100">
             Flip Images for the Best Shot in Seconds
           </h1>
-          <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
-            Flip image is a free tool that allows you to quickly and easily flip
-            any image vertically or horizontally online in seconds.
+          <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8 dark:text-gray-300">
+            Flip image is a free tool that allows you to quickly and easily flip any image
+            vertically or horizontally online in seconds.
           </p>
           <div className="mt-10">
             <ImageFlip />
@@ -31,8 +30,7 @@ export default function Hero() {
       </div>
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-      >
+        className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
         <div
           style={{
             clipPath:

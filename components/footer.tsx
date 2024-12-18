@@ -33,16 +33,13 @@ export default function Footer({ className, ...props }: FooterProps) {
           <div className="mt-16 grid gap-8 md:grid-cols-4 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:gap-8">
               <div className="md:mt-0">
-                <h3 className="text-base/6 font-semibold text-gray-100">
-                  Legal
-                </h3>
+                <h3 className="text-base/6 font-semibold text-gray-100">Legal</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
                       <Link
                         href={item.href}
-                        className="text-base/6 text-gray-300 transition hover:text-gray-100"
-                      >
+                        className="text-base/6 text-gray-300 transition hover:text-violet-400">
                         {item.name}
                       </Link>
                     </li>
@@ -57,9 +54,8 @@ export default function Footer({ className, ...props }: FooterProps) {
             &copy; 2024{' '}
             <a
               href="https://www.yuurrific.com"
-              className="text-violet-300 transition hover:text-violet-100"
-              target="_blank"
-            >
+              className="font-medium text-violet-400 transition hover:text-violet-400"
+              target="_blank">
               Yuurrific
             </a>
             . All rights reserved.

@@ -5,7 +5,7 @@ const features = [
     id: 2,
     name: 'Support Multiple Image Formats',
     description:
-      'Works with multiple formats like JPG and PNG, ensuring seamless resizing for your preferred image type.',
+      'Works with multiple formats like JPG and PNG, ensuring it works seamlessly with your preferred image type.',
     icon: ImagesIcon,
   },
   {
@@ -19,14 +19,14 @@ const features = [
     id: 4,
     name: 'Intuitive User Experience',
     description:
-      'Intuitive and beginner-friendly interface makes resizing your profile pictures a smooth and stress-free experience.',
+      'Intuitive and beginner-friendly interface makes flipping a picture a smooth and stress-free experience.',
     icon: ScaleIcon,
   },
   {
     id: 5,
     name: 'Free to download',
     description:
-      'Completely free to use—no downloads, no installations. Access it directly in your browser from any device, anywhere in the world.',
+      'Completely free to use—no payments, no downloads, no sign-ups required. Access it directly in your browser from any device, anywhere in the world.',
     icon: ImageDownIcon,
   },
 ];
@@ -39,7 +39,7 @@ export default function Features() {
           Simple to use
         </p>
         <h2 className="mt-0 text-pretty text-4xl font-bold !leading-tight tracking-tight text-gray-900 sm:mt-2 sm:text-5xl lg:text-balance dark:text-gray-100">
-          Features of PFP Resizer Tool
+          Features of Flip Image
         </h2>
       </div>
       <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">

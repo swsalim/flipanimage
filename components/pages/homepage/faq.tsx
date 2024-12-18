@@ -6,14 +6,14 @@ const faqs = [
     category: 'General',
     question: 'What is this tool for?',
     answer:
-      'This tool allows you to resize your profile pictures for various social media platforms to match their recommended dimensions, ensuring your profile looks professional and clear.',
+      "Not happy with your photo? Try flipping it! A quick horizontal or vertical flip can transform your image, adding a fresh perspective or creating an entirely new visual effect. It's an easy way to breathe new life into a shot that didn't quite work the first time.",
   },
   {
     id: 6,
     category: 'General',
-    question: 'What does PFP mean?',
+    question: 'When would you need to flip an image?',
     answer:
-      'PFP stands for "Profile Picture." It refers to the image users select to represent themselves on social media platforms, forums, and other online communities. This image plays a pivotal role in digital identity, offering a visual representation of an individual or brand to the online world.',
+      "Have you ever looked at a photo and thought, \"Something just doesn't feel right\"? Sometimes, simply flipping an image can work magic. It's like giving your picture a quick makeover. When you flip a photo, you can change how it catches your eye. We naturally tend to scan images from left to right, so a flip can make the photo feel more balanced and interesting. It's almost like rearranging furniture - a small change that can completely transform the feel of the whole scene.",
   },
   {
     id: 2,
@@ -34,13 +34,6 @@ const faqs = [
     answer:
       'No, your images are processed in real-time and not stored on our servers to ensure your privacy.',
   },
-  {
-    id: 5,
-    category: 'General',
-    question: 'What happens if I upload an image with the wrong aspect ratio?',
-    answer:
-      "The tool automatically crops and resizes the image to meet the platform's requirements while maintaining the main focus of the picture.",
-  },
 ];
 
 export default function GeneralFaqs() {
@@ -55,7 +48,7 @@ export default function GeneralFaqs() {
           Frequently asked questions
         </h2>
         <p className="mt-6 text-base/7 text-gray-500 dark:text-gray-300">
-          Answers to common questions about our free profile picture resizer.
+          Answers to common questions about our free image flipper.
         </p>
       </div>
       <div className="mt-20">
