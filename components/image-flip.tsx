@@ -3,14 +3,9 @@
 import React, { useCallback, useMemo, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 
-import {
-  Camera,
-  Download,
-  FlipHorizontal2Icon,
-  FlipVertical2Icon,
-  ImageDownIcon,
-} from 'lucide-react';
+import { Camera, FlipHorizontal2Icon, FlipVertical2Icon, ImageDownIcon } from 'lucide-react';
 
+import { saEvent } from '@/lib/analytics';
 import { cn } from '@/lib/utils';
 
 export default function ImageFlip() {
@@ -24,6 +19,7 @@ export default function ImageFlip() {
     reader.onload = (event) => {
       if (event.target?.result) {
         setImage(event.target.result as string);
+        saEvent('drop-image');
       }
     };
 
@@ -80,6 +76,7 @@ export default function ImageFlip() {
       link.download = `flipped_image.${format}`;
       link.href = canvas.toDataURL(`image/${format}`);
       link.click();
+      saEvent('download-image');
     };
     img.src = image;
   };
