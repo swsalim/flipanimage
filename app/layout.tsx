@@ -87,7 +87,7 @@ export default function RootLayout({
         suppressHydrationWarning>
         <StickyAds
           image="codefast.png"
-          url="https://codefa.st/?via=pfpresizer"
+          url="https://codefa.st/?via=flipanimage"
           name="Want to learn to code for entrepreneurship? 💻"
           description="Everything you need to build your SaaS as a complete beginner."
           label="Limited Time Offer"
