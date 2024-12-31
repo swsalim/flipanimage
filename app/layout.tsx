@@ -6,6 +6,7 @@ import { siteConfig } from '@/config/site';
 
 import { absoluteUrl, cn } from '@/lib/utils';
 
+import StickyAds from '@/components/ads/sticky-ads';
 import Footer from '@/components/footer';
 import Navbar from '@/components/navbar';
 import LogoJsonLd from '@/components/structured-data/logo-json-ld';
@@ -84,6 +85,13 @@ export default function RootLayout({
       <body
         className={cn('flex min-h-screen flex-col font-sans antialiased', plusJakartaSans.variable)}
         suppressHydrationWarning>
+        <StickyAds
+          image="codefast.png"
+          url="https://codefa.st/?via=pfpresizer"
+          name="Want to learn to code for entrepreneurship? 💻"
+          description="Everything you need to build your SaaS as a complete beginner."
+          label="Limited Time Offer"
+        />
         <Navbar />
         <main className="flex grow flex-col justify-center">{children}</main>
         <Footer />
