@@ -33,10 +33,10 @@ export default function Navbar() {
               Resize Image
             </a>
             <a
-              href="https://www.cymktopantone.com/?ref=flipanimage"
+              href="https://www.cmyktopantone.com/?ref=flipanimage"
               target="_blank"
               className="font-medium text-gray-700 transition hover:text-violet-600 dark:text-gray-300 dark:hover:text-violet-400">
-              CYMK2Pantone
+              CMYK Pantone
             </a>
           </div>
         </Container>
