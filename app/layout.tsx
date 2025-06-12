@@ -75,12 +75,12 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="//ik.imagekit.io" />
-        <link rel="preconnect" href="//scripts.simpleanalyticscdn.com" />
-        <link rel="preconnect" href="//queue.simpleanalyticscdn.com" />
-        <link rel="dns-prefetch" href="//queue.simpleanalyticscdn.com" />
-        <link rel="dns-prefetch" href="//scripts.simpleanalyticscdn.com" />
         <link rel="dns-prefetch" href="//ik.imagekit.io" />
         <LogoJsonLd logo={absoluteUrl('/icons/logo.png')} url={absoluteUrl()} />
+        <script
+          src="https://beamanalytics.b-cdn.net/beam.min.js"
+          data-token="c2fbac7b-0b09-48f0-b925-7a5a61de2a3b"
+          async></script>
       </head>
       <body
         className={cn('flex min-h-screen flex-col font-sans antialiased', plusJakartaSans.variable)}
@@ -95,18 +95,6 @@ export default function RootLayout({
         <Navbar />
         <main className="flex grow flex-col justify-center">{children}</main>
         <Footer />
-        <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-        {/* <script async src="https://scripts.simpleanalyticscdn.com/auto-events.js"></script> */}
-        <noscript>
-          <Image
-            src="https://queue.simpleanalyticscdn.com/noscript.gif"
-            alt=""
-            referrerPolicy="no-referrer-when-downgrade"
-            width="1"
-            height="1"
-            unoptimized
-          />
-        </noscript>
       </body>
     </html>
   );
