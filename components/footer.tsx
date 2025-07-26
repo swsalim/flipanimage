@@ -43,6 +43,14 @@ const navigation = {
       href: 'https://www.clinicgeek.com/',
     },
     {
+      name: 'Keyword Gap',
+      href: 'https://www.keywordgap.com/',
+    },
+    {
+      name: 'mainan.fun',
+      href: 'https://www.mainan.fun',
+    },
+    {
       name: 'Indie World Map',
       href: 'https://www.indieworldmap.com/',
     },
