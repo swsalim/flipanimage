@@ -58,6 +58,10 @@ const navigation = {
       name: 'Dental Clinics Malaysia',
       href: 'https://www.dentalclinicclosetome.my/',
     },
+    {
+      name: 'What is my screen size?',
+      href: 'https://www.whatismyscreensize.com/',
+    },
   ],
 };
 
