@@ -6,11 +6,23 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function absoluteUrl(input = '') {
-  return process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'
-    ? `https://${process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}${input}`
-    : process.env.NEXT_PUBLIC_VERCEL_ENV === 'preview'
-      ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}${input}`
-      : `${process.env.NEXT_PUBLIC_BASE_URL}${input}`;
+  const suffix = input === '' ? '' : input.startsWith('/') ? input : `/${input}`;
+
+  if (process.env.NEXT_PUBLIC_VERCEL_ENV === 'production') {
+    const host = process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL;
+    if (host) {
+      return `https://${host}${suffix}`;
+    }
+  }
+  if (process.env.NEXT_PUBLIC_VERCEL_ENV === 'preview') {
+    const host = process.env.NEXT_PUBLIC_VERCEL_URL;
+    if (host) {
+      return `https://${host}${suffix}`;
+    }
+  }
+
+  const base = (process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000').replace(/\/$/, '');
+  return `${base}${suffix}`;
 }
 
 export function imageKitLoader({

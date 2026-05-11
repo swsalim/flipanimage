@@ -28,6 +28,7 @@ export default {
     },
     fontFamily: {
       sans: ['var(--font-sans)', ...defaultTheme.fontFamily.sans],
+      display: ['var(--font-display)', ...defaultTheme.fontFamily.serif],
     },
     extend: {
       colors: {

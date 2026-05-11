@@ -2,68 +2,18 @@ import type { ComponentProps } from 'react';
 
 import Link from 'next/link';
 
+import { featuredNav, primaryNav } from '@/config/nav';
+
 import { cn } from '@/lib/utils';
 
 import { Logo } from '@/components/icons';
 
-export type IconProps = React.HTMLAttributes<SVGElement>;
+const legal = [
+  { name: 'Terms of service', href: '/legal/terms-and-conditions' },
+  { name: 'Privacy policy', href: '/legal/privacy-policy' },
+];
 
-const navigation = {
-  legal: [
-    { name: 'Terms of service', href: '/legal/terms-and-conditions' },
-    { name: 'Privacy policy', href: '/legal/privacy-policy' },
-  ],
-  projects: [
-    {
-      name: 'PFP Resizer',
-      href: 'https://www.pfpresizer.com/',
-    },
-    {
-      name: 'RGB to Pantone Converter',
-      href: 'https://www.rgbtopantone.com/',
-    },
-    {
-      name: 'Sudoku Unlimited',
-      href: 'https://sudokuunlimited.com/',
-    },
-    {
-      name: 'Random Number App',
-      href: 'https://www.randomnumberapp.com/',
-    },
-    {
-      name: 'Will It Rain Tomorrow?',
-      href: 'https://www.willitraintomorrow.com/',
-    },
-    {
-      name: 'Water a Day',
-      href: 'https://www.wateraday.com/',
-    },
-    {
-      name: 'Clinic Geek',
-      href: 'https://www.clinicgeek.com/',
-    },
-    {
-      name: 'Keyword Gap',
-      href: 'https://www.keywordgap.com/',
-    },
-    {
-      name: 'mainan.fun',
-      href: 'https://www.mainan.fun',
-    },
-    {
-      name: 'Indie World Map',
-      href: 'https://www.indieworldmap.com/',
-    },
-    {
-      name: 'Dental Clinics Malaysia',
-      href: 'https://www.dentalclinicclosetome.my/',
-    },
-    {
-      name: 'What is my screen size?',
-      href: 'https://www.whatismyscreensize.com/',
-    },
-  ],
-};
+const siteSections = primaryNav.filter((item) => item.href !== '/');
 
 interface FooterProps extends ComponentProps<'footer'> {
   className?: string;
@@ -82,47 +32,57 @@ export default function Footer({ className, ...props }: FooterProps) {
               Flip your images online for free
             </p>
           </div>
-          <div className="mt-16 grid gap-8 md:grid-cols-4 xl:col-span-2 xl:mt-0">
-            <div className="md:grid md:gap-8">
-              <div className="md:mt-0">
-                <h3 className="text-base/6 font-semibold text-gray-100">Legal</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.legal.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        href={item.href}
-                        className="text-base/6 text-gray-300 transition hover:text-violet-400">
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:col-span-2 xl:mt-0">
+            <div>
+              <h3 className="text-base/6 font-semibold text-gray-100">On this site</h3>
+              <ul role="list" className="mt-6 space-y-4">
+                {siteSections.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="text-base/6 text-gray-300 transition hover:text-violet-400">
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div className="md:col-span-2 md:grid md:gap-8">
-              <div className="md:mt-0">
-                <h3 className="text-base/6 font-semibold text-gray-100">Our Projects</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.projects.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        href={item.href}
-                        className="text-base/6 text-gray-300 transition hover:text-violet-400">
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            <div>
+              <h3 className="text-base/6 font-semibold text-gray-100">Popular tools</h3>
+              <ul role="list" className="mt-6 space-y-4">
+                {featuredNav.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="text-base/6 text-gray-300 transition hover:text-violet-400">
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-base/6 font-semibold text-gray-100">Legal</h3>
+              <ul role="list" className="mt-6 space-y-4">
+                {legal.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className="text-base/6 text-gray-300 transition hover:text-violet-400">
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
         <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
-          <p className="text-base/6 text-gray-300">
+          <p className="text-sm font-semibold text-gray-300">
             &copy; {currentYear}{' '}
             <a
               href="https://www.yuurrific.com?ref=flipanimage"
-              className="font-medium text-violet-400 transition hover:text-violet-400"
+              className="font-semibold text-violet-400 transition hover:text-violet-400"
               target="_blank">
               Yuurrific
             </a>

@@ -20,7 +20,7 @@ export default function WebPageJsonLd({
         description: description,
         lastReviewed: lastReviewed,
         reviewedBy: {
-          type: 'Person',
+          '@type': 'Person',
           name: reviewedBy,
         },
       }}

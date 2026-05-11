@@ -1,3 +1,5 @@
+import type { Metadata } from 'next';
+
 import { siteConfig } from '@/config/site';
 
 import { absoluteUrl } from '@/lib/utils';
@@ -9,6 +11,15 @@ import Hero from '@/components/pages/homepage/hero';
 import Steps from '@/components/pages/homepage/steps';
 import WebsiteJsonLd from '@/components/structured-data/WebsiteJsonLd';
 import { Wrapper } from '@/components/wrapper';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    url: absoluteUrl(),
+  },
+};
 
 export default function Home() {
   return (

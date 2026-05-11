@@ -8,9 +8,15 @@ import { Camera, FlipHorizontal2Icon, FlipVertical2Icon, ImageDownIcon } from 'l
 import { saEvent } from '@/lib/analytics';
 import { cn } from '@/lib/utils';
 
-export default function ImageFlip() {
+export type ImageFlipOrientation = 'normal' | 'horizontal' | 'vertical';
+
+type ImageFlipProps = {
+  initialOrientation?: ImageFlipOrientation;
+};
+
+export default function ImageFlip({ initialOrientation = 'normal' }: ImageFlipProps) {
   const [image, setImage] = useState<string | null>(null);
-  const [orientation, setOrientation] = useState<'normal' | 'horizontal' | 'vertical'>('normal');
+  const [orientation, setOrientation] = useState<'normal' | 'horizontal' | 'vertical'>(initialOrientation);
 
   const onDrop = useCallback((acceptedFiles: File[]) => {
     const file = acceptedFiles[0];
@@ -30,7 +36,7 @@ export default function ImageFlip() {
     () => ({
       onDrop,
       accept: {
-        'image/*': ['.png', '.jpg', '.jpeg', '.gif'],
+        'image/*': ['.png', '.jpg', '.jpeg', '.gif', '.webp', '.svg', '.heic', '.heif'],
       },
       multiple: false,
     }),

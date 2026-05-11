@@ -2,8 +2,10 @@ import FaqJsonLd from './structured-data/faq-json-ld';
 
 export default function Faqs({
   data,
+  introDescription,
 }: {
   data: { category: string; question: string; answer: string }[];
+  introDescription?: string;
 }) {
   return (
     <>
@@ -16,7 +18,7 @@ export default function Faqs({
           Frequently asked questions
         </h2>
         <p className="mt-6 text-base/7 text-gray-500 dark:text-gray-300">
-          Answers to common questions about our free profile picture resizer.
+          {introDescription ?? 'Answers to common questions.'}
         </p>
       </div>
       <div className="mt-20">

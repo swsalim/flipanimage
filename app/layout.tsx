@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
-import { Plus_Jakarta_Sans } from 'next/font/google';
-import Image from 'next/image';
+import { Figtree, Fraunces } from 'next/font/google';
 
 import { siteConfig } from '@/config/site';
 
@@ -13,9 +12,14 @@ import LogoJsonLd from '@/components/structured-data/logo-json-ld';
 
 import './globals.css';
 
-const plusJakartaSans = Plus_Jakarta_Sans({
+const figtree = Figtree({
   subsets: ['latin'],
   variable: '--font-sans',
+});
+
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  variable: '--font-display',
 });
 
 export const metadata: Metadata = {
@@ -25,9 +29,6 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   metadataBase: siteConfig.url,
-  alternates: {
-    canonical: '/',
-  },
   authors: [
     {
       name: 'Yuyu',
@@ -83,7 +84,11 @@ export default function RootLayout({
           async></script>
       </head>
       <body
-        className={cn('flex min-h-screen flex-col font-sans antialiased', plusJakartaSans.variable)}
+        className={cn(
+          'flex min-h-screen flex-col font-sans antialiased',
+          figtree.variable,
+          fraunces.variable,
+        )}
         suppressHydrationWarning>
         <StickyAds
           image="codefast.png"
@@ -93,7 +98,7 @@ export default function RootLayout({
           label="Limited Time Offer"
         />
         <Navbar />
-        <main className="flex grow flex-col justify-center">{children}</main>
+        <main className="flex min-h-[60vh] grow flex-col">{children}</main>
         <Footer />
       </body>
     </html>

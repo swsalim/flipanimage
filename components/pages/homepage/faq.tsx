@@ -25,7 +25,8 @@ const faqs = [
     id: 3,
     category: 'General',
     question: 'What file formats are supported?',
-    answer: 'You can upload images in popular formats like JPEG, PNG, and WebP.',
+    answer:
+      'You can upload JPEG, PNG, GIF, WebP, and SVG where supported by your browser. HEIC varies by browser (Safari on Apple devices is most reliable).',
   },
   {
     id: 4,
@@ -48,7 +49,7 @@ export default function GeneralFaqs() {
           Frequently asked questions
         </h2>
         <p className="mt-6 text-base/7 text-gray-500 dark:text-gray-300">
-          Answers to common questions about our free image flipper.
+          Answers to common questions about our free browser-based image flipper.
         </p>
       </div>
       <div className="mt-20">
